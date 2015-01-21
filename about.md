@@ -4,8 +4,5 @@ title: About
 permalink: /about/
 ---
 
-jekyll [jekyllrb.com](http://jekyllrb.com/)
+colin.zhang [jekyllrb.com](colin-zhang.github.io)
 
-jekyll: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
-
-jekyll source code [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
