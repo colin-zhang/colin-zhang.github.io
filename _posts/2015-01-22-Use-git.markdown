@@ -6,5 +6,5 @@ categories: git
 ---
 
 [Visual git guide](http://marklodato.github.io/visual-git-guide/index-en.html)
-
+[Easy git guid](http://www.bootcss.com/p/git-guide/)
 
