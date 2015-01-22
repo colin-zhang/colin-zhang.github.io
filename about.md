@@ -4,5 +4,5 @@ title: About
 permalink: /about/
 ---
 
-colin.zhang [jekyllrb.com](colin-zhang.github.io)
+colin.zhang [colin](http://colin-zhang.github.io)
 
