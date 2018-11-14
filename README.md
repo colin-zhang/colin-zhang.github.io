@@ -1,2 +1,2 @@
-# colin-zhang.github.io
-[personal github page](http://colin-zhang.github.io)
+# realzhangm.github.io
+[personal github page](http://realzhangm.github.io)
