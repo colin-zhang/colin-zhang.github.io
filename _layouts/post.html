@@ -14,3 +14,15 @@ layout: default
 </article>
 
 {% include comments.html %}
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      showProcessingMessages: true,
+      tex2jax: {
+          inlineMath:  [ ["$", "$"] ],
+          displayMath: [ ["$$","$$"] ],
+      }
+  });
+  
+  </script>
+  <script src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=default"></script>
