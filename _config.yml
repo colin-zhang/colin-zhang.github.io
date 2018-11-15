@@ -3,7 +3,7 @@ title_left    : "zhangm的blog"
 title_right   : "space" # default: ""
 description   : "欢迎"
 keywords      : "blog"
-url           : blog.m-zhang.cn # site url
+url           : http://realzhangm.github.io/ # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
 
