@@ -1,5 +1,6 @@
 {% if site.postshare_enabled %}
 <aside class="share">
+<script src="https://cdn.bootcss.com/social-share.js/1.0.16/js/jquery.share.min.js"></script>
 
  <!--  <p>分享：<a href="http://twitter.com/share?text={{page.title}}&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url }}&amp;via={{ site.twitter_username }}"
   onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">Twitter</a>
@@ -7,8 +8,21 @@
   <!-- weibo -->
   <!-- http://service.weibo.com/share/share.php?url=https://blog.m-zhang.cn&title=haha -->
 
-  <p>分享到：<a href="http://service.weibo.com/share/share.php?title={{page.title}}&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url }}"
-  onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">微博</a>
+<!--   <p>分享到：<a href="http://service.weibo.com/share/share.php?title={{page.title}}&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url }}"
+  onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">微博</a> -->
+
+<!-- <div class="share-component" data-disabled="google,twitter,facebook" data-description="分享到微博，QQ空间，腾讯微博，人人，豆瓣"></div> -->
+
+<div class="social-share">
+<p>分享：
+
+<a href="http://service.weibo.com/share/share.php?title={{page.title}}&amp;url={{ page.url | prepend: site.baseurl | prepend: site.url }}" class="social-share-icon icon-weibo " onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;"></a>
+
+
+</p>
+
+
+</div>
 
 
 
