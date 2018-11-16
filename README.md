@@ -1,3 +1,3 @@
 
-- **s使用:** https://heiswayi.github.io/thinkspace/
+- **使用:** https://heiswayi.github.io/thinkspace/
 

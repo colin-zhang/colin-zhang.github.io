@@ -3,15 +3,16 @@ title_left    : "Colin的Blog"
 title_right   : "" # default: ""
 description   : "欢迎"
 keywords      : "blog"
-url           : http://blog.m-zhang.cn # site url
+url           : https://blog.m-zhang.cn # site url
 baseurl       : "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover         : "" # image uri like logo/cover image for site seo
 
-google_analytics  : UA-XXXXX-XX
-twitter_username  : ""
-comments_enabled  : false # if enabled (set to true), please provide your disqus_username
+google_analytics  : UA-129311512-1
+twitter_username  : "hchtym"
+comments_enabled  : true # if enabled (set to true), please provide your disqus_username
 disqus_shortname  : ""
-postshare_enabled : false
+livere_shortname  : "MTAyMC80MTA3NS8xNzYwMA=="
+postshare_enabled : true
 
 # Build settings
 permalink   : /:year/:month/:title/
