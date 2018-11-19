@@ -9,7 +9,7 @@ keywords: "发包, 报文回放"
 # 说明
 Tcprepaly是一个报文回放工具，可以将使用 .pcap 文件保存的报文回放。
 
-Tcpreplay默认使用使用的标准的Linux系统API来发包的，发包速度较慢。Netmap是一种高效的收发报文的 I/O 框架，可以使用其API 直接在用户态完成数据包到网卡的拷贝，从而大大提高发包效率。下面介绍了Tcpreplay使用Netmap的编译步骤。关于Tcprepaly和Netmap 的更是信息可以参考各自的官网。
+Tcpreplay默认使用使用的标准的Linux系统API来发包的，发包速度较慢。Netmap是一种高效的收发报文的 I/O 框架，可以使用其API直接在用户态完成数据包到网卡的拷贝，即「内核旁路技术」[[^1]][[^2]]，从而大大提高发包效率。下面介绍了Tcpreplay使用Netmap的编译步骤。关于Tcprepaly和Netmap 的更是信息可以参考各自的官网。
 
 # Netmap
 
@@ -33,7 +33,7 @@ make
 # insmod ./netmap.ko
 # insmod ./ixgbe/ixgbe.ko
 ```
-##. tcpreplay
+## Tcpreplay
 
 1). 下载代码
 ```sh
@@ -53,14 +53,6 @@ make && make install
 tcpreplay -i ens1f0 -tK --loop 50000 --netmap /home/zhangm/pcap/bigFlows.pcap
 ```
 -K, --preload-pcap Preloads packets into RAM before sending //提升效率
-
-### 参考:
-
-[http://blog.csdn.net/fengfengdiandia/article/details/52594758](http://blog.csdn.net/fengfengdiandia/article/details/52594758)
-
-[http://blog.csdn.net/wwh578867817/article/details/49559453](http://blog.csdn.net/wwh578867817/article/details/49559453)
-
-[https://blog.cloudflare.com/kernel-bypass/](https://blog.cloudflare.com/kernel-bypass/)
 
 ## 附:
 ##### 如何获取网卡驱动名称, 如 ens1f0 接口?
@@ -88,3 +80,9 @@ supports-priv-flags: yes
 [root@localhost build]# lspci  -s 02:00.0 -vvv | grep driver
     Kernel driver in use: i40e
 ```
+
+
+## 参考：
+[^1]: 1:[https://blog.cloudflare.com/kernel-bypass/](https://blog.cloudflare.com/kernel-bypass/)
+[^2]: 2:[http://blog.csdn.net/fengfengdiandia/article/details/52594758](http://blog.csdn.net/fengfengdiandia/article/details/52594758)
+[^3]: 3:[http://blog.csdn.net/wwh578867817/article/details/49559453](http://blog.csdn.net/wwh578867817/article/details/49559453)

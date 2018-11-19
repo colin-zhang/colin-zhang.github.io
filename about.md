@@ -1,8 +1,17 @@
 ---
 layout: page
-title: 关于
+title:
 permalink: /about/
 ---
 
-简介：
+##### About Me：
+I am a programmer using C/C++, Python.
 
+---
+
+##### Social Links:
+1. [Github](https://github.com/realzhangm)
+2. [Twitter](https://twitter.com/hchtym)
+
+---
+![打赏](/assets/images/weichat_ds.jpeg)
