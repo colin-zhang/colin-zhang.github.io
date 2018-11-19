@@ -3,26 +3,26 @@ layout: post
 title: "Tcpreplay使用Netmap发包"
 description: "Tcpreplay使用Netmap模式的步骤"
 comments: true
-keywords: "发包"
+keywords: "发包, 报文回放"
 ---
 
 # 说明
-Tcprepaly 是一个报文回放工具，可以将使用 .pcap 文件保存的报文回放。
+Tcprepaly是一个报文回放工具，可以将使用 .pcap 文件保存的报文回放。
 
-Tcpreplay 默认使用使用的 Linux 协议栈来发包的，发包速度较慢。Netmap 是一种高效的收发报文的 I/O 框架，可以使用其 API 直接在用户态完成数据包到网卡的拷贝，从而大大提高发包效率。下面介绍了 Tcpreplay 使用 Netmap 的编译步骤。关于 Tcprepaly 和 Netmap 的更是信息可以参考各自的官网。
+Tcpreplay默认使用使用的标准的Linux系统API来发包的，发包速度较慢。Netmap是一种高效的收发报文的 I/O 框架，可以使用其API 直接在用户态完成数据包到网卡的拷贝，从而大大提高发包效率。下面介绍了Tcpreplay使用Netmap的编译步骤。关于Tcprepaly和Netmap 的更是信息可以参考各自的官网。
 
 # Netmap
 
-1) 下载 Netmap 代码
+1). 下载Netmap代码
 ```sh
 git clone https://github.com/luigirizzo/netmap
 ```
-2) 编译 Netmap
+2). 编译Netmap
 ```sh
 ./configure --drivers=i40e
 make
 ```
-3) 安装 Netmap 模块
+3). 安装Netmap模块
 ```sh
 # rmmod i40e
 # insmod ./netmap.ko
@@ -35,18 +35,18 @@ make
 ```
 ##. tcpreplay
 
-1) 下载代码
+1). 下载代码
 ```sh
 git clone https://github.com/appneta/tcpreplay
 ```
-2.) 编译安装
+2). 编译安装
 ```sh
 ./configure --with-netmap=/home/zhangm/test/netmap/
 make && make install
 ```
-3\. 使用
+3). 使用
 
-使用 Tcpreplay 时增加 --netmap 参数, 则使用 Netmap 模式
+使用Tcpreplay时增加 --netmap 参数, 则使用 Netmap 模式
 
 如:
 ```sh
@@ -54,7 +54,7 @@ tcpreplay -i ens1f0 -tK --loop 50000 --netmap /home/zhangm/pcap/bigFlows.pcap
 ```
 -K, --preload-pcap Preloads packets into RAM before sending //提升效率
 
-参考:
+### 参考:
 
 [http://blog.csdn.net/fengfengdiandia/article/details/52594758](http://blog.csdn.net/fengfengdiandia/article/details/52594758)
 
